@@ -19,7 +19,7 @@ const About = () => {
             <p>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
               eget lacinia odio sem nec elit. Curabitur blandit tempus
-              porttitor. Test one!
+              porttitor. Test two!
             </p>
             <Link to="/contact" className="btn">
               Contact
