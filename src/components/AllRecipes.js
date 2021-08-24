@@ -16,6 +16,7 @@ const query = graphql`
         }
         image {
           gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+          fluid(maxWidth: 1000)
         }
       }
     }
