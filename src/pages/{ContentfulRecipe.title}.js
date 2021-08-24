@@ -4,6 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import Layout from "../components/Layout"
 import slugify from "slugify"
+import SEO from "../components/SEO"
+import multiwordToTitle from "../utils/multiwordToTitle"
 
 const RecipeTemplate = ({ data }) => {
   const {
@@ -19,8 +21,11 @@ const RecipeTemplate = ({ data }) => {
   const pathToImage = getImage(image)
   const { tags, instructions, ingredients, tools } = content
 
+  const properTitle = multiwordToTitle(title)
+
   return (
     <Layout>
+      <SEO title={properTitle} description={description} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}
